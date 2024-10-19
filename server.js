@@ -8,6 +8,8 @@ app.get('/', (req, res) => {
 });
 
 const port = 3001;
-app.listen(port, () => {
+const host = '0.0.0.0';  // Bind to all network interfaces
+
+app.listen(port, host, () => {
   console.log(`Server is running from: ${__dirname}`);
 });
