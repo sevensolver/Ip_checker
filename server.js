@@ -1,16 +1,13 @@
 const express = require('express');
 const app = express();
-const path = require('path');
-const os = require('os');
 
-// Get the current directory
-const currentPath = __dirname;
+console.log(__dirname);  // This will log your current directory path
 
 app.get('/', (req, res) => {
-  res.send(`Hello World! This server is running from the directory: ${currentPath}`);
+  res.send(`Hello World! The server is running from: ${__dirname}`);
 });
 
 const port = 3001;
 app.listen(port, () => {
-  console.log(`Server is running on http://${os.hostname()}:${port}`);
+  console.log(`Server is running from: ${__dirname}`);
 });
